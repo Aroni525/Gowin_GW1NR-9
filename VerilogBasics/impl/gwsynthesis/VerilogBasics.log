@@ -1,0 +1,5 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file '/home/sdev/Workspace/GowinEDA/GW1N-9C/VerilogBasics/src/Top.v'
+ERROR (EX0302) : No valid top module found
+GowinSynthesis finish

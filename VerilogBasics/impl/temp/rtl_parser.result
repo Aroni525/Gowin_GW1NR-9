@@ -1,0 +1,10 @@
+[
+ {
+  "InstFile" : "/home/sdev/Workspace/GowinEDA/GW1N-9C/VerilogBasics/src/Top.v",
+  "InstLine" : 1,
+  "InstName" : "AndGate",
+  "ModuleFile" : "/home/sdev/Workspace/GowinEDA/GW1N-9C/VerilogBasics/src/Top.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "AndGate"
+ }
+]
