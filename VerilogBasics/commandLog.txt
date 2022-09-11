@@ -1,13 +1,24 @@
 *** GOWIN Tcl Command Line Console  *** 
-add new file: "/home/sdev/Workspace/GowinEDA/TangNano-9K-example-main/led/src/LED.v"
-add new file: "/home/sdev/Workspace/GowinEDA/TangNano-9K-example-main/led/src/9K_LED_project.cst"
+add new file: "/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/Top.v"
+add new file: "/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/CombinationalLogic.v"
+add new file: "/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/HwSetup.cst"
+add new file: "/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/VerilogBasics.sdc"
 current device: GW1NR-9C  GW1NR-LV9QN88PC6/I5
 GowinSynthesis start
 Running parser ...
-Analyzing Verilog file '/home/sdev/Workspace/GowinEDA/TangNano-9K-example-main/led/src/LED.v'
-Compiling module 'led'("/home/sdev/Workspace/GowinEDA/TangNano-9K-example-main/led/src/LED.v":1)
-NOTE  (EX0101) : Current top module is "led"
+Analyzing Verilog file '/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/Top.v'
+Analyzing Verilog file '/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/CombinationalLogic.v'
+Compiling module 'TopModule'("/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/Top.v":1)
+WARN  (EX3780) : Using initial value of 'speed' since it is never assigned("/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/Top.v":13)
+Compiling module 'booleanGate'("/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/CombinationalLogic.v":1)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/Top.v":37)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/Top.v":47)
+NOTE  (EX0101) : Current top module is "TopModule"
+WARN  (EX0211) : The output port "extraLed" of module "TopModule" has no driver("/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/Top.v":5)
 [5%] Running netlist conversion ...
+WARN  (CV0016) : Input sys_rst_n is unused("/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/Top.v":3)
+WARN  (CV0016) : Input btn2 is unused("/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/Top.v":4)
+WARN  (CV0003) : Output "extraLed" has undriven bits, assigning undriven bits to Z, simulation mismatch possible("/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/Top.v":5)
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
 [15%] Optimizing Phase 1 completed
@@ -23,13 +34,14 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
-[95%] Generate netlist file "/home/sdev/Workspace/GowinEDA/GW1N-9C/VerilogBasics/impl/gwsynthesis/project.vg" completed
-[100%] Generate report file "/home/sdev/Workspace/GowinEDA/GW1N-9C/VerilogBasics/impl/gwsynthesis/project_syn.rpt.html" completed
+WARN  (NL0002) : The module "booleanGate" instantiated to "andGate" is swept in optimizing("/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/Top.v":21)
+[95%] Generate netlist file "/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/impl/gwsynthesis/project.vg" completed
+[100%] Generate report file "/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/impl/gwsynthesis/project_syn.rpt.html" completed
 GowinSynthesis finish
-Reading netlist file: "/home/sdev/Workspace/GowinEDA/GW1N-9C/VerilogBasics/impl/gwsynthesis/project.vg"
-Parsing netlist file "/home/sdev/Workspace/GowinEDA/GW1N-9C/VerilogBasics/impl/gwsynthesis/project.vg" completed
+Reading netlist file: "/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/impl/gwsynthesis/project.vg"
+Parsing netlist file "/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/impl/gwsynthesis/project.vg" completed
 Processing netlist completed
-Reading constraint file: "/home/sdev/Workspace/GowinEDA/TangNano-9K-example-main/led/src/9K_LED_project.cst"
+Reading constraint file: "/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/HwSetup.cst"
 Physical Constraint parsed completed
 Running placement......
 [10%] Placement Phase 0 completed
@@ -48,10 +60,10 @@ Bitstream generation in progress......
 Bitstream generation completed
 Running power analysis......
 [100%] Power analysis completed
-Generate file "/home/sdev/Workspace/GowinEDA/GW1N-9C/VerilogBasics/impl/pnr/project.power.html" completed
-Generate file "/home/sdev/Workspace/GowinEDA/GW1N-9C/VerilogBasics/impl/pnr/project.pin.html" completed
-Generate file "/home/sdev/Workspace/GowinEDA/GW1N-9C/VerilogBasics/impl/pnr/project.rpt.html" completed
-Generate file "/home/sdev/Workspace/GowinEDA/GW1N-9C/VerilogBasics/impl/pnr/project.rpt.txt" completed
-Generate file "/home/sdev/Workspace/GowinEDA/GW1N-9C/VerilogBasics/impl/pnr/project.tr.html" completed
-Sun Jun 26 13:08:31 2022
+Generate file "/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/impl/pnr/project.power.html" completed
+Generate file "/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/impl/pnr/project.pin.html" completed
+Generate file "/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/impl/pnr/project.rpt.html" completed
+Generate file "/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/impl/pnr/project.rpt.txt" completed
+Generate file "/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/impl/pnr/project.tr.html" completed
+Sun Sep 11 20:20:18 2022
 

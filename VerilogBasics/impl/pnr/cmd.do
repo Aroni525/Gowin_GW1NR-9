@@ -1,8 +1,9 @@
--d /home/sdev/Workspace/GowinEDA/GW1N-9C/VerilogBasics/impl/gwsynthesis/project.vg
+-d /home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/impl/gwsynthesis/project.vg
 -p GW1NR-9C-QFN88P-6
 -pn GW1NR-LV9QN88PC6/I5
--cst /home/sdev/Workspace/GowinEDA/TangNano-9K-example-main/led/src/9K_LED_project.cst
--cfg /home/sdev/Workspace/GowinEDA/GW1N-9C/VerilogBasics/impl/pnr/device.cfg
+-cst /home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/HwSetup.cst
+-cfg /home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/impl/pnr/device.cfg
+-sdc /home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/VerilogBasics.sdc
 -bit
 -tr
 -ph

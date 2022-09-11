@@ -1,0 +1,21 @@
+
+#!/bin/bash
+
+echo Building FPGA project
+
+log="commandLog.txt"
+
+gw_sh projectConf.tcl | tee $log
+
+SuccessOutputString="[100%] Power analysis completed"
+
+if grep -q "${SuccessOutputStrin}" "${log}" ; then
+    printf "\nCOMPILATION SUCCESSFUL! \n"
+    printf "Deploying to FPGA... \n\n"
+    openFPGALoader -m -b tangnano9k impl/pnr/project.fs -v
+else 
+    printf "\nCOMPILATION FAILED! \n"
+fi
+
+
+

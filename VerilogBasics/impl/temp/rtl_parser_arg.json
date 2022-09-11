@@ -1,7 +1,11 @@
 {
  "Files" : [
   {
-   "Path" : "/home/sdev/Workspace/GowinEDA/GW1N-9C/VerilogBasics/src/Top.v",
+   "Path" : "/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/CombinationalLogic.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/Top.v",
    "Type" : "verilog"
   }
  ],
@@ -9,8 +13,8 @@
 
  ],
  "LoopLimit" : 2000,
- "ResultFile" : "/home/sdev/Workspace/GowinEDA/GW1N-9C/VerilogBasics/impl/temp/rtl_parser.result",
- "Top" : "src/Top.v",
- "VerilogStd" : "sysv",
+ "ResultFile" : "/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/impl/temp/rtl_parser.result",
+ "Top" : "TopModule",
+ "VerilogStd" : "verilog_2001",
  "VhdlStd" : "vhdl_2008"
 }
