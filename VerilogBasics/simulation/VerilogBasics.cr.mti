@@ -1,15 +1,1 @@
-/home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/ledBlinker.v {1 {vlog -work work -vopt -stats=none /home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/src/ledBlinker.v
-Questa Intel Starter FPGA Edition-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
--- Compiling module ledBlinker
 
-Top level modules:
-	ledBlinker
-
-} {} {}} /home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/testbenches/ledBlinker_tb.v {1 {vlog -work work -vopt -vlog01compat -stats=none /home/sdev/Workspace/GowinEDA/Gowin_GW1NR-9/VerilogBasics/testbenches/ledBlinker_tb.v
-Questa Intel Starter FPGA Edition-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
--- Compiling module ledBlinker_tb
-
-Top level modules:
-	ledBlinker_tb
-
-} {} {}}
