@@ -4,14 +4,19 @@ echo Building FPGA project
 
 log="commandLog.txt"
 
+if test -f "$log"; then
+    rm $log
+fi
+
 gw_sh projectConf.tcl | tee $log
 
-SuccessOutputString="[100%] Power analysis completed"
+SuccessOutputString="Power analysis completed"
 
-if grep -q "${SuccessOutputStrin}" "${log}" ; then
+if grep -q "$SuccessOutputString" "$log" ; then
     printf "\nCOMPILATION SUCCESSFUL! \n"
     printf "Deploying to FPGA... \n\n"
-    openFPGALoader -m -b tangnano9k impl/pnr/project.fs -v
+    fpgaLoader=/home/sdev/Apps/OpenFpgaLoader/bin/openFPGALoader
+    $fpgaLoader -m -b tangnano9k impl/pnr/project.fs -v
 else 
     printf "\nCOMPILATION FAILED! \n"
 fi
